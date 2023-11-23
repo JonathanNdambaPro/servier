@@ -1,0 +1,24 @@
+[MAIN]
+ignore-paths=test
+disable=
+    C0114, R0903, W2301, C0301, W0511, W9008
+[BASIC]
+bad-names=('foo', 'bar', 'baz', 'toto', 'tutu', 'tata', 'df')
+include-naming-hint=True
+
+[CLASSES]
+check-protected-access-in-special-methods=True
+
+[DESIGN]
+max-bool-expr=3
+max-branches=5
+max-locals=20
+max-returns=3
+max-statements=20
+max-args=10
+
+[FORMAT]
+max-line-length=128
+
+[REFACTORING]
+max-nested-blocks=3

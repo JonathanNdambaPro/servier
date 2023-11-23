@@ -1,0 +1,13 @@
+trash_*.py
+__pycache__
+init/
+dags/
+lib/
+lib64/*
+lib64
+share/
+bin/
+include/
+generated/
+pyvenv.cfg
+.coverage

@@ -1,0 +1,34 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0  # Use the ref you want to point at
+    hooks:
+    -   id: trailing-whitespace
+    -   id: check-added-large-files
+-   repo: https://github.com/psf/black
+    rev: 22.6.0
+    hooks:
+    - id: black
+      exclude: ^bin/
+-   repo: https://github.com/pycqa/flake8
+    rev: 3.9.2
+    hooks:
+    - id: flake8
+      exclude: ^bin/
+-   repo: https://github.com/pycqa/isort
+    rev: 5.12.0
+    hooks:
+    -   id: isort
+        files: "\\.(py)$"
+        exclude: ^bin/
+- repo: local
+  hooks:
+    - id: pylint
+      name: pylint
+      entry: pylint
+      language: system
+      types: [python]
+      args:
+        [
+          "--rcfile=.pylintrc", # Link to your config file
+          "--load-plugins=pylint.extensions.docparams", # Load an extension
+        ]
